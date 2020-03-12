@@ -1,0 +1,76 @@
+{
+  "students": [
+    {
+      "id": 2,
+      "firstName": "Raghavendra",
+      "LastName": "Deshmukh",
+      "Class": "Fourth",
+      "percentage": "78",
+      "marks": "95"
+    },
+    {
+      "id": 3,
+      "firstName": "Pratik",
+      "LastName": "Bilonikar",
+      "Class": "Second",
+      "percentage": "79",
+      "marks": "94"
+    },
+    {
+      "id": 4,
+      "firstName": "Madhuri",
+      "LastName": "Chaudhary",
+      "Class": "Third",
+      "percentage": "90",
+      "marks": "90"
+    },
+    {
+      "id": 5,
+      "firstName": "John",
+      "LastName": "Watson",
+      "Class": "Fifth",
+      "percentage": "95",
+      "marks": "32"
+    },
+    {
+      "id": 6,
+      "firstName": "Dinesh",
+      "LastName": "Patil",
+      "Class": "Fifth",
+      "percentage": "78",
+      "marks": "94"
+    },
+    {
+      "id": 7,
+      "firstName": "Kunal",
+      "LastName": "Joshi",
+      "Class": "Sixth",
+      "percentage": "95",
+      "marks": "98"
+    },
+    {
+      "id": 8,
+      "firstName": "Rohit",
+      "LastName": "Pawar",
+      "Class": "Third",
+      "percentage": "90",
+      "marks": "32"
+    },
+    {
+      "id": 9,
+      "firstName": "Aman",
+      "LastName": "Haldikar",
+      "Class": "Third",
+      "percentage": "95",
+      "marks": "89"
+    },
+    {
+      "id": 10,
+      "firstName": "Shubham",
+      "LastName": "Jaiswal",
+      "Class": "Fifth",
+      "percentage": "95",
+      "marks": "100"
+    }
+  ]
+}
