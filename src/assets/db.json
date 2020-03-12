@@ -63,6 +63,14 @@
       "Class": "Third",
       "percentage": "95",
       "marks": "89"
+    },
+    {
+      "id": 10,
+      "firstName": "Shubham",
+      "LastName": "Jaiswal",
+      "Class": "Fifth",
+      "percentage": "95",
+      "marks": "100"
     }
   ]
 }
