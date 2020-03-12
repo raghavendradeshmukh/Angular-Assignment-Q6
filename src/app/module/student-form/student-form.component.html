@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">Student Form</h2>
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(studentService.studentInfo)">
+
+        <div class="form-group">
+          <label for="firstname">First Name </label>
+          <input type="text" id="firstname" name="firstname" required minlength="4" #firstname="ngModel"
+            class="form-control" pattern="^[a-zA-Z]+$" [(ngModel)]="studentService.studentInfo.firstName">
+
+          <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)" class="text-danger">
+            <div *ngIf="firstname.errors.required">
+              First Name is required
+            </div>
+            <div *ngIf="firstname.errors.minlength">
+              First Name Minimum Length is 4
+            </div>
+            <div *ngIf="firstname.errors.pattern">
+              Only characters are allowed
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="lastname">Last Name </label>
+          <input type="text" id="lastname" name="lastname" required maxlength="15" #lastname="ngModel"
+            class="form-control" pattern="^[a-zA-Z]+$" [(ngModel)]="studentService.studentInfo.LastName">
+
+          <div *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)" class="text-danger">
+            <div *ngIf="lastname.errors.required">
+              Last Name is required
+            </div>
+            <div *ngIf="lastname.errors.maxlength">
+              Last Name Minimum Length is 4
+            </div>
+            <div *ngIf="lastname.errors.pattern">
+              Only characters are allowed
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="className">Class</label>
+          <input type="text" id="className" name="className" required #className="ngModel" placeholder="First"
+            class="form-control" pattern="^[a-zA-Z]+$" [(ngModel)]="studentService.studentInfo.Class">
+
+          <div *ngIf="!className?.valid && (className?.dirty || className?.touched)" class="text-danger">
+            <div *ngIf="className.errors.required">
+              Class Name is required
+            </div>
+            <div *ngIf="className.errors.pattern">
+              Only characters are allowed
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="percentage">Percentage</label>
+          <input type="text" id="percentage" name="percentage" required #percentage="ngModel" class="form-control"
+            pattern="^[0-9]*$"
+            [(ngModel)]="studentService.studentInfo.percentage">
+
+          <div *ngIf="!percentage?.valid && (percentage?.dirty || percentage?.touched)" class="text-danger">
+            <div *ngIf="percentage.errors.required">
+              Percentage is required
+            </div>
+            <div *ngIf="percentage.errors.pattern">
+              only Numbers with Percentage allowed
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="marks">Marks in Maths</label>
+          <input type="text" id="marks" name="marks" required maxlength="15" #marks="ngModel" class="form-control"
+            pattern="^[0-9]*$" [(ngModel)]="studentService.studentInfo.marks">
+
+          <div *ngIf="!marks?.valid && (marks?.dirty || marks?.touched)" class="text-danger">
+            <div *ngIf="marks.errors.required">
+                Marks is required
+            </div>
+            <div *ngIf="marks.errors.maxlength">
+             Marks Minimum Length is {{marks.errors.maxlength?.requiredLength}}
+            </div>
+            <div *ngIf="marks.errors.pattern">
+              Only characters are allowed
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Submit</button>
+        </div>
+
+        <p>{{contactForm.valid}} </p>
+
+      </form>
+    </div>
+  </div>
